@@ -7,9 +7,17 @@ import store from './store/'
 import './config/rem'
 import FastClick from 'fastclick'
 
+
+
+
+import Mint from 'mint-ui';
+Vue.use(Mint);
+import 'mint-ui/lib/style.css';
+
+
 //适用于移动端点击
 if ('addEventListener' in document) {
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     FastClick.attach(document.body);
   }, false);
 }
@@ -20,6 +28,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
-  components: { App },
+  components: {App},
   template: '<App/>'
 }).$mount('#app')
