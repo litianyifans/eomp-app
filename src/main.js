@@ -10,9 +10,11 @@ import FastClick from 'fastclick'
 
 
 
-import Mint from 'mint-ui';
-Vue.use(Mint);
-import 'mint-ui/lib/style.css';
+import Mint from 'mint-ui'
+Vue.use(Mint)
+import 'mint-ui/lib/style'
+//引入assets资源一定要写绝对路径
+import 'assets/css/swiper.min'
 
 
 //适用于移动端点击
