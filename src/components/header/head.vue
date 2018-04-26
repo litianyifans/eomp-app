@@ -20,7 +20,7 @@
     z-index: 100;
     left: 0;
     top: 0;
-    @include wh(100%, 1.95rem);
+    @include wh(100%, 45px);
   }
 
 </style>

@@ -15,6 +15,8 @@ Vue.use(Mint)
 import 'mint-ui/lib/style'
 //引入assets资源一定要写绝对路径
 import 'assets/css/swiper.min'
+import 'assets/css/style'
+
 
 
 //适用于移动端点击

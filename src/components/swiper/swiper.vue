@@ -29,7 +29,7 @@
           loop: true,
           pagination: '.swiper-pagination',
           paginationClickable: true,
-          autoplay : 2000,
+          autoplay : 10000000,
           autoplayDisableOnInteraction : false,
         })
       })
@@ -41,7 +41,7 @@
 <style lang="scss" type="text/scss" scoped>
   img {
     width: 100%;
-    height: auto;
+    height: 150px;
   }
   #swiper .swiper-pagination-bullet {
     background: #e5e8e8;
