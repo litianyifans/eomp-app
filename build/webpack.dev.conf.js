@@ -14,6 +14,10 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
 
+const appData = require('../data.json')
+const systemInfo = appData.systemInfo
+const personInfo = appData.personInfo
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -23,6 +27,20 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    before(app) {
+      app.get('/api/systemInfo', function(req, res) {
+        res.json({
+          errno: 0,
+          data: systemInfo
+        })
+      });
+      app.get('/api/personInfo', function(req, res) {
+        res.json({
+          errno: 0,
+          data: personInfo
+        })
+      });
+    },
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

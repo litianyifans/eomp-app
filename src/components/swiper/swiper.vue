@@ -36,12 +36,13 @@
 
     }
   }
+
 </script>
 
 <style lang="scss" type="text/scss" scoped>
+  @import '../../assets/css/mixin';
   img {
-    width: 100%;
-    height: 150px;
+    @include wh(100%, 6.05rem);
   }
   #swiper .swiper-pagination-bullet {
     background: #e5e8e8;

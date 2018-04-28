@@ -1,17 +1,17 @@
 <template>
   <div>
     <head-top>
-      <span slot='logo' class="head_logo">eomp</span>
+      <span slot='logo' class="head_logo"></span>
     </head-top>
     <nav class="scroll-panel">
       <swiper :imgs="imgs"></swiper>
     </nav>
     <div class="content-wrapper">
       <ul class="grid-list">
-        <li class="grid-item">
-          <span class="icon" :class="itemMap[0]"></span>
-          <span class="icon-text">站点监控</span>
-        </li>
+          <li class="grid-item">
+            <span class="icon" :class="itemMap[0]"></span>
+            <span class="icon-text">站点监控</span>
+          </li>
         <li class="grid-item">
           <span class="icon" :class="itemMap[1]"></span>
           <span class="icon-text">告警</span>
@@ -85,13 +85,13 @@
 
 <style lang="scss" type="text/scss" scoped>
   //transparent
-  @import '../../style/mixin';
+  @import '../../assets/css/mixin';
 
-  .head_logo {
-    left: 12px;
+  .head_logo{
+    left: 0.4rem;
     font-weight: 400;
-    @include sc(16px, #fff);
-    @include wh(60px, 25px);
+    @include sc(0.7rem, #fff);
+    @include wh(2.3rem, 0.7rem);
     @include ct;
   }
 
@@ -99,8 +99,8 @@
     position: relative;
     padding-bottom: 0;
     margin-bottom: 0;
-    padding-top: 45px;
-    height: 195px;
+    padding-top: 1.95rem;
+    height: 8rem;
   }
 
   .content-wrapper {
@@ -114,8 +114,6 @@
     width: 100%;
     border-top: 1px solid #eee;
     border-left: 1px solid #eee;
-    margin: 0;
-    padding: 0;
     background-color: white;
     font-size: 0;
   }
@@ -126,7 +124,6 @@
     width: 25%;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    margin: 0;
     padding: 11px 15px;
     vertical-align: top;
     text-align: center;
@@ -153,8 +150,8 @@
   .icon-text {
     display: block;
     padding-top: 10px;
-    line-size: 15px;
-    font-size: 15px;
+    line-size: 0.6rem;
+    font-size: 0.6rem;
     text-overflow: ellipsis;
     overflow: hidden;
   }

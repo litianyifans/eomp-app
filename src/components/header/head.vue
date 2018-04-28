@@ -13,14 +13,14 @@
 </script>
 
 <style lang="scss" type="text/scss" scoped>
-  @import '../../style/mixin';
+  @import '../../assets/css/mixin';
   #head_top{
     background-color: $blue;
     position: fixed;
     z-index: 100;
     left: 0;
     top: 0;
-    @include wh(100%, 45px);
+    @include wh(100%, 1.95rem);
   }
 
 </style>

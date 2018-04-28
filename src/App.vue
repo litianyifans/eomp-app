@@ -13,7 +13,7 @@
 
 
 <style lang="scss">
-  @import './style/common.scss';
+  @import 'assets/css/common.scss';
   .router-fade-enter-active, .router-fade-leave-active {
     transition: opacity .3s;
   }

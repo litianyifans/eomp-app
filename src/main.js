@@ -6,16 +6,19 @@ import router from './router/'
 import store from './store/'
 import './config/rem'
 import FastClick from 'fastclick'
+import VueResource from 'vue-resource'
 
 
 
-
+Vue.use(VueResource)
 import Mint from 'mint-ui'
 Vue.use(Mint)
 import 'mint-ui/lib/style'
 //引入assets资源一定要写绝对路径
 import 'assets/css/swiper.min'
 import 'assets/css/style'
+
+
 
 
 
@@ -27,6 +30,7 @@ if ('addEventListener' in document) {
 }
 
 Vue.config.productionTip = false
+
 
 /* eslint-disable no-new */
 new Vue({
