@@ -1,18 +1,27 @@
 <template>
   <div class="report">
-    <section class="list-tab" v-for="item in infoList">
-      <h1 class="title">{{item.title}}</h1>
-      <div class="reportDate">{{item.createTime}}</div>
-      <div class="content">{{item.content}}</div>
-    </section>
+    <router-link :to="{path:'/info'}">
+      <section class="list-tab" v-for="item in infoList">
+        <h1 class="title">{{item.title}}</h1>
+        <div class="reportDate">{{item.createTime | formatDate }}</div>
+        <div class="content">{{item.content}}</div>
+      </section>
+    </router-link>
   </div>
 </template>
 <script>
+  import {formatDate} from '../../assets/js/common'
   export default {
     props: {
       infoList:{
         type: Array ,
         default: () => []
+      }
+    },
+    filters: {
+      formatDate(time) {
+        var date = new Date(time);
+        return formatDate(date, 'yyyy-MM-dd hh:mm');
       }
     }
   }
@@ -43,12 +52,15 @@
   .reportDate{
     padding-top: 5px;
     line-height: 20px;
-    font-size: 0.3rem;
+    font-size: 0.5rem;
+    color: gray;
   }
   .content{
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    color: gray;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap ;
+
   }
 </style>
